@@ -1,0 +1,63 @@
+@import url('https://cdn-uicons.flaticon.com/uicons-regular-rounded/css/uicons-regular-rounded.css');
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&family=Roboto:wght@500;700;900&display=swap");
+body {
+  margin: 0;
+font-family: "Montserrat", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
+}
+aside{
+  width: 40%;
+  border-right: 1px solid rgb(210, 210, 210);
+}
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+li{
+  list-style-type: none;
+}
+ul,
+ol {
+  margin: 0;
+  padding: 0;
+}
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+@font-face {
+  font-family: "uicons-regular-rounded";
+  src: url("./assets/webfonts/uicons-regular-rounded.eot") format("embedded-opentype"),
+    url("./assets/webfonts/uicons-regular-rounded.woff2") format("woff2"),
+    url("./assets/webfonts/uicons-regular-rounded.woff") format("woff");
+}
+
+i[class^="fi-rr-"]:before,
+i[class*=" fi-rr-"]:before,
+span[class^="fi-rr-"]:before,
+span[class*="fi-rr-"]:before {
+  font-family: uicons-regular-rounded !important;
+  font-style: normal;
+  font-weight: normal !important;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.fi-rr-angle-circle-down:before {
+  content: "\f10b";
+  color:green;
+}
