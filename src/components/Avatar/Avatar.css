@@ -1,0 +1,13 @@
+.avatar-conteiner {
+    margin: auto 0;
+    margin-right: 20px;
+}
+.friend-avatar {
+    display: inline;
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+}
+.avatar-decoretion {
+    margin-left: -20px;
+}

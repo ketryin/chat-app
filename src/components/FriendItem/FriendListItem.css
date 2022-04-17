@@ -1,0 +1,11 @@
+.friend-conteiner{
+    display: flex;
+}
+.text-conteiner{
+    width: 100px;
+}
+.message-date{
+    padding-right: 10px;
+    margin-bottom: -20px;
+    margin-left: auto;
+}

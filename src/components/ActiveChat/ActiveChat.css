@@ -1,0 +1,9 @@
+.activeChat-conteiner{
+    display: flex;
+    align-items: center;
+    background-color: rgb(230, 230, 230);
+}
+.activeChat-title{
+    font-weight: 400;
+    color: #000;
+}

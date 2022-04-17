@@ -1,0 +1,12 @@
+.friends-item{
+    cursor: pointer;
+    padding-left: 20px;
+}
+
+.active {
+    background-color: rgb(230, 230, 230);
+}
+
+.friends-item:not(:last-child){
+border-bottom: 1px solid rgb(210, 210, 210);
+}
