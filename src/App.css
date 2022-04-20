@@ -1,8 +1,10 @@
 .wrapper{
     display: flex;
+    height: 100hv;
 }
 .activeChat{
     display: inline-block;
+    height: 100vh;
     width: 100%;
 }
 .title{
