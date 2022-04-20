@@ -1,4 +1,5 @@
 import React from "react";
+import defaultAva from "../../assets/default-avatar.jpg";
 import "./Avatar.css";
 
 const Avatar = ({ name, avatar }) => {
@@ -10,4 +11,7 @@ const Avatar = ({ name, avatar }) => {
   );
 };
 
+Avatar.defautProps = {
+  avatar: defaultAva,
+};
 export default Avatar;

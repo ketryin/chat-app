@@ -1,5 +1,4 @@
 import React from "react";
-import defaulttAva from "../../assets/default-avatar.jpg";
 import Avatar from "../Avatar/Avatar.js";
 import "./FriendListItem.css";
 
@@ -14,10 +13,6 @@ const FriendItem = ({ name, avatar }) => {
       <p className="message-date">Date</p>
     </div>
   );
-};
-
-FriendItem.defaultProps = {
-  avatar: defaulttAva,
 };
 
 export default FriendItem;
