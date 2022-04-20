@@ -1,5 +1,6 @@
 @import url('https://cdn-uicons.flaticon.com/uicons-regular-rounded/css/uicons-regular-rounded.css');
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&family=Roboto:wght@500;700;900&display=swap");
+
 body {
   margin: 0;
 font-family: "Montserrat", sans-serif;
@@ -16,7 +17,9 @@ p {
   margin: 0;
 }
 aside{
-  width: 40%;
+  width:33rem;
+  height: 100vh;
+  overflow-y: scroll;
   border-right: 1px solid rgb(210, 210, 210);
 }
 code {
@@ -60,4 +63,8 @@ span[class*="fi-rr-"]:before {
 .fi-rr-angle-circle-down:before {
   content: "\f10b";
   color:green;
+}
+.fi-rr-paper-plane:before {
+  content: "\f30f";
+  color: rgb(127, 127, 127);
 }
