@@ -10,7 +10,7 @@ function SearchBar({ onSearchTermChanged }) {
     <div className="searchBar-container">
       <Avatar name={"user"} avatar={defaulttAva} />
       <form className="SearchForm">
-        <button type="submit" className="SearchForm-button"></button>
+        <div type="submit" className="SearchForm-button"></div>
 
         <input
           className="SearchForm-input"
