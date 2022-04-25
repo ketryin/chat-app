@@ -24,7 +24,7 @@ function ActiveChat({ friendId, messages }) {
       </div>
       <div className="chat-conteiner">
         {messages.map(({ message, date, isIncoming }) => (
-          <Message text={message} type={isIncoming} date={date} />
+          <Message key={message} text={message} type={isIncoming} date={date} />
         ))}
         <AlwaysScrollToBottom />
       </div>

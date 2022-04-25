@@ -9,7 +9,7 @@
     color: #000;
 }
 .chat-conteiner{
-    height: calc(100% - 150px);
+    height: calc(100% - 160px);
     overflow-y: scroll;
-    background-color: rgb(127, 92, 92);
+    padding: 10px 10px 0px 10px;
 }

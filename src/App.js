@@ -8,18 +8,34 @@ import { getAnswer } from "./api/chucknorris-api.js";
 
 function App() {
   const USER_ID = 100;
+  const ANSWER_DELAY_MS = 5000;
 
   const [currentFriendsSearchTerm, setFriendsSearchTerm] = useState("");
   const [currentChatId, setCurrentChatId] = useState(null);
   const [currentMessages, setCurrentMessages] = useState([]);
+  const [friendsListrerenderCounter, setFriendsListRerenderCounter] =
+    useState(0);
   const getAnswerTimeoutRef = useRef(null);
   const isGetAnswerTimeoutFinished = useRef(true);
 
   useEffect(() => {
+    setFriendsListRerenderCounter((x) => x + 1);
+
     if (isGetAnswerTimeoutFinished.current) {
       clearTimeout(getAnswerTimeoutRef.current);
     }
-  }, []);
+
+    if (currentMessages.length === 0 && localStorage.getItem(currentChatId)) {
+      setCurrentMessages(JSON.parse(localStorage.getItem(currentChatId)));
+    } else {
+      localStorage.setItem(currentChatId, JSON.stringify(currentMessages));
+    }
+  }, [currentChatId, currentMessages]);
+
+  const switchUser = (userId) => {
+    setCurrentChatId(userId);
+    setCurrentMessages([]);
+  };
 
   const addMessage = (messageText) => {
     const message = {
@@ -48,7 +64,7 @@ function App() {
         isGetAnswerTimeoutFinished.current = true;
         setCurrentMessages((messages) => [...messages, answer]);
       });
-    }, 1000);
+    }, ANSWER_DELAY_MS);
   };
 
   return (
@@ -58,8 +74,9 @@ function App() {
         <h1 className="title">CHATS</h1>
         <FriendsList
           searchTerm={currentFriendsSearchTerm}
-          onChatClick={setCurrentChatId}
+          onChatClick={switchUser}
           currentChatId={currentChatId}
+          rerenderCounter={friendsListrerenderCounter}
         />
       </aside>
       {currentChatId && (
